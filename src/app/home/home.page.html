@@ -1,20 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-padding ion-no-border">
+  <ion-button 
+    expand="block" 
+    (click)="conunterUp()" 
+    [disabled]="numero == MAXIMO">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </ion-button>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- interpolacion -->
+  <div class="center-content big-font">
+    {{ numero }}
   </div>
 </ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+  <ion-button 
+    expand="block" 
+    (click)="conunterDown()" 
+    [disabled]="numero == MINIMO">
+    <ion-icon name="arrow-down-outline"></ion-icon>
+  </ion-button>
+</ion-footer>
